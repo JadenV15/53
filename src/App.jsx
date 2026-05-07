@@ -153,7 +153,7 @@ function Foot() {
         <span className='text-sm'>Made by Jaden, with Blender</span>
         {/*Use self-center to override shadcn self-stretch*/}
         <Separator orientation='vertical' className='h-6 !w-[1.5px] !self-center' />
-        <a href='/#' className='text-sm hover:underline underline-offset-3'>Github</a>
+        <a href='https://github.com/JadenV15/53' target="_blank" rel="noopener noreferrer" className='text-sm hover:underline underline-offset-3'>Github</a>
       </div>
     </div>
   );
