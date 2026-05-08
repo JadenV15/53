@@ -1,8 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button.jsx';
-import { Separator } from '@/components/ui/separator.jsx';
 import confetti from 'canvas-confetti';
 import './App.css';
+import { Button } from '@/components/ui/button.jsx';
+import { Separator } from '@/components/ui/separator.jsx';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog.jsx';
+import { Info } from 'lucide-react';
 
 function ConfettiTrigger() {
   function shootStars() {
@@ -111,6 +120,26 @@ function ModeToggle() {
   );
 }
 
+function InfoDialog() {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant='ghost' size='icon' className='rounded-full'>
+          <Info />
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>生日快乐</DialogTitle>
+          <DialogDescription>
+            祝你身体健康，平平安安，开开心心，万事如意，永远生活在快乐与幸福之中！
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 function Overlays() {
   const [dark, setDark] = useState(false);
   return (
@@ -118,6 +147,7 @@ function Overlays() {
     {/*For some reason, padding is ignored, so use the border as padding and ring as border*/}
       <ConfettiTrigger />
       <ModeToggle />
+      <InfoDialog />
     </div>
   );
 }
@@ -152,7 +182,7 @@ function Foot() {
       <div className='flex justify-center items-center h-10 gap-2'>
         <span className='text-sm'>Made by Jaden, with Blender</span>
         {/*Use self-center to override shadcn self-stretch*/}
-        <Separator orientation='vertical' className='h-6 !w-[1.5px] !self-center' />
+        <Separator orientation='vertical' className='h-6 !w-[1.5px] !self-center !bg-foreground/20' />
         <a href='https://github.com/JadenV15/53' target="_blank" rel="noopener noreferrer" className='text-sm hover:underline underline-offset-3'>Github</a>
       </div>
     </div>
