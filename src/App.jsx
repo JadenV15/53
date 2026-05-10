@@ -163,10 +163,10 @@ function Main() {
   return (
     <div className='flex-1 flex flex-col justify-center items-center w-full px-4 my-4'>
       <div className='flex flex-col justify-center items-center h-fit w-fit gap-0'>
-        <video muted loop controls preload="none" poster="/cake.png" className="object-contain h-100 w-auto max-h-full max-w-full rounded-t-2xl dark:ring-1 dark:ring-foreground/25">
+        <video muted loop controls preload="none" poster="/cake.png" className="object-contain h-[50dvh] w-auto max-h-full max-w-full rounded-t-2xl dark:ring-1 dark:ring-foreground/25">
           <source src="/cake.mp4" type="video/mp4" />
           {/*Fallback*/}
-          <img src='/cake.png' className='object-contain h-100 w-auto max-h-full max-w-full rounded-t-2xl dark:ring-1 dark:ring-foreground/25' alt="Cake image (note: your browser doesn't support video" />
+          <img src='/cake.png' className='object-contain h-[50dvh] w-auto max-h-full max-w-full rounded-t-2xl dark:ring-1 dark:ring-foreground/25' alt="Cake image (note: your browser doesn't support video" />
         </video>
         <div className='flex justify-center items-center w-[calc(100%-2.5px)] h-12 dark:w-full rounded-b-2xl ring-1 ring-foreground/25 bg-card dark:bg-[rgb(0,0,0)]'>
           <span className='font-semibold text-base'>Happy birthday! 🎂✨</span>
